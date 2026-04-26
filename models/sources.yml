@@ -8,5 +8,5 @@ sources:
           {% if target.name == 'dev' %}
             's3://datalake-prf-dev/*.parquet'
           {% else %}
-            's3://datalake-prf-prod/*.parquet'
+            "s3://datalake-prf-{{ target.name }}/*.parquet"
           {% endif %}
