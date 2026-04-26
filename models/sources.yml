@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: cloudflare_r2
+    loader: duckdb
+    tables:
+      - name: prf_analytics_raw
+        external_location: >
+          {% if target.name == 'dev' %}
+            's3://datalake-prf-dev/*.parquet'
+          {% else %}
+            's3://datalake-prf-prod/*.parquet'
+          {% endif %}

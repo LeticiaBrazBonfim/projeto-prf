@@ -1,0 +1,16 @@
+# dbt
+target/
+dbt_packages/
+logs/
+
+# DuckDB (Pra não subir o banco local, apenas o código)
+*.db
+*.db.wal
+
+# Python
+__pycache__/
+venv/
+.env
+
+# OS
+.DS_Store
